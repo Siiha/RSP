@@ -7,7 +7,7 @@ def r():
     people.selection("r")
     base.destroy()
     base2 = Tk()
-    l = Label(base2, text="Ai selection is " + ai.hand)
+    l = Label(base2, text="The opponent's choice is  " + ai.hand)
     l.pack()
     base2.mainloop()
 def s():
@@ -15,7 +15,7 @@ def s():
     people.selection("s")
     base.destroy()
     base2 = Tk()
-    l = Label(base2, text="Ai selection is " + ai.hand)
+    l = Label(base2, text="The opponent's choice is " + ai.hand)
     l.pack()
     base2.mainloop()
 def p():
@@ -23,7 +23,7 @@ def p():
     people.selection("p")
     base.destroy()
     base2 = Tk()
-    l = Label(base2, text="Ai selection is " + ai.hand)
+    l = Label(base2, text="The opponent's choice is " + ai.hand)
     l.pack()
     base2.mainloop()
 base = Tk()
