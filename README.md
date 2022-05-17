@@ -5,7 +5,7 @@ p = paper
 ## Dependent
 ### rspg.py
 #### librarys
-rspl.py
+RSPl.py
 ## description
 Without any randomness maked a stone scissors paper game.
 ## links
