@@ -2,6 +2,12 @@
 r = rock
 s = scissors
 p = paper
+## run
+### commandline
+Go to the RSP directory.
+```
+python RSP.py
+```
 ## Dependent
 ### rspg.py
 #### librarys
