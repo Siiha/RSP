@@ -51,21 +51,21 @@ class ai(player):
 class referee:
     def check(self,p1,p2):
             if p1.hand==y[y.index(p2.hand) - 3 + 1]:
-                print(p1.name + " lost!")
+                print(f"{p1.name} lost!")
                 p2.cores += 1
-                f2 = open("score.txt","w")
-                f2.write(p2.name+" won!\n")
+                f2 = open("score.txt","a")
+                f2.write(f"{p2.name} won!\n")
                 f2.close()
             elif p1.hand==p2.hand:
-                f2 = open("score.txt","w")
+                f2 = open("score.txt","a")
                 f2.write("It's a draw!\n")
                 f2.close()
                 print("It's a draw!")
             else:
-                print(p1.name + " won!")
+                print(f"{p1.name} won!")
                 p1.cores += 1
-                f2 = open("score.txt","w")
-                f2.write(p1.name+" won!\n")
+                f2 = open("score.txt","a")
+                f2.write(f"{p1.name} won! \n")
                 
 people=people(input("your name is: "))
 ai=ai("ai")
