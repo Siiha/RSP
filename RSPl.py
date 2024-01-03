@@ -1,4 +1,4 @@
-y= list("rsp")
+y=tuple("rsp")
 class player:
     def __init__(self,name):
         self.name = name
@@ -12,14 +12,15 @@ class people(player):
         f.close()
 class ai(player):
     def selection(self):
-        x= []
-        
         f=open("hands.txt", "r")
-        self.r=f.read()
-        
+        r=f.read()
+        f.close()
+        x = {}
         for i in y:
-            x.append(self.r.count(i))
-        self.hand=y[x.index(max(x)) - 1]
+            x[i]=r.count(i)
+        v = tuple(x.values())
+        k = tuple(x.keys())
+        self.hand=k[v.index(max(v)) - 1]
 class referee:
     def check(self,p1,p2):
             if p1.hand==y[y.index(p2.hand) - 3 + 1]:
@@ -38,3 +39,27 @@ class referee:
                 p1.cores += 1
                 f2 = open("score.txt","a")
                 f2.write(f"{p1.name} won!\n")
+def hand(x):
+	h = {"r":"""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+""","s":"""
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+""","p":"""
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""}
+	return h[x]
