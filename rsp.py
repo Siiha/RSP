@@ -1,11 +1,13 @@
-from RSPl import *
-people=people(input("your name is: "))
-ai=ai("ai")
-print("r" in y)
-while int(input("Enter 0 to stop: ")):
-	ai.selection()
-	people.selection(input("Choose a hand r,s,p: "))
-	re = referee()
-	re.check(people,ai)
-	print(hand(ai.hand))
-	print(hand(people.hand))
+from rspl import *
+player['name']=input("Give you nickname: ")
+def main():
+	rounds=0
+	while int(input("Enter 0 to stop: ")):
+		player['hand']=input('Choose a hand r,s,p: ')
+		dot = machine_chose(history(player['hand']))
+		print(hands[dot])
+		player['wins']+=check_win(player['hand'],dot)
+		rounds+=1
+main()	
+		
+	
