@@ -1,29 +1,28 @@
-from RSPl import *
+from rspl import *
 from tkinter import *
-people = people("you")
-ai = ai("ai")
+player['name']="AAA"
 def r():
-    ai.selection()
-    people.selection("r")
+    player['hand']='r'
+    dot = machine_chose(history(player['hand']))
     base.destroy()
     base2 = Tk()
-    l = Label(base2, text="The opponent's choice is  " + ai.hand)
+    l = Label(base2, text="The opponent's choice is  " + dot)
     l.pack()
     base2.mainloop()
 def s():
-    ai.selection()
-    people.selection("s")
+    player['hand']='s'
+    dot = machine_chose(history(player['hand']))
     base.destroy()
     base2 = Tk()
-    l = Label(base2, text="The opponent's choice is " + ai.hand)
+    l = Label(base2, text="The opponent's choice is  " + dot)
     l.pack()
     base2.mainloop()
 def p():
-    ai.selection()
-    people.selection("p")
+    player['hand']='p'
+    dot = machine_chose(history(player['hand']))
     base.destroy()
     base2 = Tk()
-    l = Label(base2, text="The opponent's choice is " + ai.hand)
+    l = Label(base2, text="The opponent's choice is  " + dot)
     l.pack()
     base2.mainloop()
 base = Tk()
@@ -34,4 +33,3 @@ ss.pack()
 sp = Button(base, text="p", command=p)
 sp.pack()
 base.mainloop()
-

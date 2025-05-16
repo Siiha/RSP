@@ -8,6 +8,7 @@ def main():
 		print(hands[dot])
 		player['wins']+=check_win(player['hand'],dot)
 		rounds+=1
+	save(player,rounds)
 main()	
 		
 	
