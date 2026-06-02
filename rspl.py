@@ -1,6 +1,8 @@
 from collections import Counter
 t = "rsp"
 player = {'name':"AAA",'wins':0,'hand':''}
+with open('history.txt','r+') as f:
+          history = f.read().replace('\n','')
 hands = {"r":"""
     _______
 ---'   ____)
@@ -28,8 +30,8 @@ def check_win(player_chose,machine_chose):
     elif player_chose==machine_chose: print("spare!"); x=0
     else: print("You lose!"); x=0
     return x
-def history(player_chose):
-	with open('history.txt','r+') as f:
-          r = f.read().replace('\n','')
-          f.write(str(t.index(player_chose)))
-          return Counter(r)
+def update_history(player_chose):
+	history += player_chose
+def write_history():
+    with open('history.txt','w') as f:
+        f.write(history)
