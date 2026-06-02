@@ -31,7 +31,14 @@ def check_win(player_chose,machine_chose):
     else: print("You lose!"); x=0
     return x
 def update_history(player_chose):
-	history += player_chose
+    global history
+    history += str(t.index(player_chose))
 def write_history():
     with open('history.txt','w') as f:
         f.write(history)
+        f.close()
+def machine_chose(history):
+    if len(history)<5: return t[0]
+    else:
+        c = Counter(history[-5:])
+        return c.most_common(1)[0][0]
