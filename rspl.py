@@ -40,5 +40,5 @@ def write_history():
 def machine_chose(history):
     if len(history)<5: return t[0]
     else:
-        c = Counter(history[-5:])
+        c = Counter(history)
         return c.most_common(1)[0][0]

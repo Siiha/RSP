@@ -10,6 +10,4 @@ def main():
 		update_history(player['hand'])
 		rounds+=1
 	write_history()
-main()	
-		
-	
+main()
