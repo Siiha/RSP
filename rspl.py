@@ -33,7 +33,3 @@ def history(player_chose):
           r = f.read().replace('\n','')
           f.write(str(t.index(player_chose)))
           return Counter(r)
-def save(player,rounds):
-    with open('games.txt','r+') as f:
-        f.write(f"{player['name']} wins:{player['wins']}/{rounds}\n")  
-machine_chose = lambda d: t[int(d.most_common()[0][0])-1]
